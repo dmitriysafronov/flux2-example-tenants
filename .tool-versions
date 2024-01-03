@@ -1,0 +1,4 @@
+kubeval v0.16.1
+kustomize 4.5.7
+pre-commit 2.20.0
+yq 4.27.2

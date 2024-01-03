@@ -1,0 +1,13 @@
+# Server:   age1q76a0rjr3swf8nqp4k4n04zxdsjnf0w59wpd38x7j6s2t3lsegusuverua
+# Safronov: age17cazrjxqfut04se7kuqfm9v4la4nej0mzuxzkm3em6j26vak5yvsh8s4xu
+
+creation_rules:
+  - path_regex: '\.enc\.json$'
+    age: >-
+      age1q76a0rjr3swf8nqp4k4n04zxdsjnf0w59wpd38x7j6s2t3lsegusuverua,
+      age17cazrjxqfut04se7kuqfm9v4la4nej0mzuxzkm3em6j26vak5yvsh8s4xu
+  - path_regex: '\.enc\.yaml$'
+    encrypted_regex: '((?i)(pass|secret($|[^N])|key|token|^data$|^stringData))'
+    age: >-
+      age1q76a0rjr3swf8nqp4k4n04zxdsjnf0w59wpd38x7j6s2t3lsegusuverua,
+      age17cazrjxqfut04se7kuqfm9v4la4nej0mzuxzkm3em6j26vak5yvsh8s4xu
