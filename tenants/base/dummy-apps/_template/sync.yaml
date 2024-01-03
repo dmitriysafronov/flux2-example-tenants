@@ -1,0 +1,32 @@
+---
+apiVersion: source.toolkit.fluxcd.io/v1beta2
+kind: GitRepository
+metadata:
+  name: dummy-apps
+  namespace: dummy-apps
+spec:
+  interval: 1m0s
+  ref:
+    branch: main
+  secretRef:
+    name: dummy-apps-git-auth
+  url: ssh://git@github.com/DmitriySafronov/flux2-tenant-dummy-apps.git
+
+---
+apiVersion: kustomize.toolkit.fluxcd.io/v1beta2
+kind: Kustomization
+metadata:
+  name: dummy-apps
+  namespace: dummy-apps
+spec:
+  decryption:
+    provider: sops
+    secretRef:
+      name: sops-age
+  interval: 1m0s
+  path: ./
+  prune: false
+  serviceAccountName: sa-dummy-apps
+  sourceRef:
+    kind: GitRepository
+    name: dummy-apps
