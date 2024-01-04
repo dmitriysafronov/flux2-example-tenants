@@ -1,7 +1,8 @@
 apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
+namespace: dummy-apps-merged
 resources:
-- ../../../../base/dummy-apps/dummy-apps-merged
+- ../../../../base/dummy-apps/_template
 patches:
 - patch: |
     - op: add
