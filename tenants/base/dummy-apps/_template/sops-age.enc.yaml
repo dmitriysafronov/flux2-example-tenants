@@ -30,8 +30,8 @@ sops:
             blNHRnZ1ei9jdFZqM0dQWldjcUo5OFEKvULir8RHxo2I6XbPEqf2rLLtgGGKHgBT
             EDBncFp2IxrU1zS3BqJeeNKJlHiktmaAF12qmN9L5xCsf1tYRd+5fA==
             -----END AGE ENCRYPTED FILE-----
-    lastmodified: "2023-05-07T16:12:46Z"
-    mac: ENC[AES256_GCM,data:ajV32UW3lCFel+kzXDz2F6wQyQb/z94KXn2WfWdc0TAXprsDagOEYc45/sBY32lgLX3YlSxvq35Vfstr+j5roJ83E7cvrFd3IgPdazQyztNmLzu5Kl1u8v7jaeWp2gxtrjfCK4VtyeCTkqvWa6J9NRdst/57C3atxbP9zVj36bQ=,iv:Dvjmthw86PswcwjNhOyMZ25s6uIKZXPHDQpknPDXGeQ=,tag:l1eNg6zy7XPm6aCUyYo+UA==,type:str]
+    lastmodified: "2024-07-24T16:58:25Z"
+    mac: ENC[AES256_GCM,data:HpMQXaIgMQx4SUwbDuzUmr8BOEP7aiZ+QZugfK0lDHvMUxaQwCe0v/HDELglgnJJ+7xLnlsx2d6T6TOVoCDdxG8LaYxLFk4PEpnCbJuMorCPWDTRi67RxL0qezz0vbGPXKWuJ3BNKB3hHVx3aOCR71r0SHNUJq0Iz+S6OqG98Mc=,iv:O5QbnY54UFcoOD51kJkragPNwfECDK6LkGW724G+3E0=,tag:s8++nvOiUJaFqW1TgAc3CQ==,type:str]
     pgp: []
     encrypted_regex: ((?i)(pass|secret($|[^N])|key|token|^data$|^stringData))
-    version: 3.7.3
+    version: 3.9.0

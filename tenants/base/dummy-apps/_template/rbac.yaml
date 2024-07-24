@@ -26,9 +26,9 @@ roleRef:
   kind: ClusterRole
   name: cluster-admin
 subjects:
-- apiGroup: rbac.authorization.k8s.io
-  kind: User
-  name: gotk:dummy-apps:reconciler
-- kind: ServiceAccount
-  name: sa-dummy-apps
-  namespace: dummy-apps
+  - apiGroup: rbac.authorization.k8s.io
+    kind: User
+    name: gotk:dummy-apps:reconciler
+  - kind: ServiceAccount
+    name: sa-dummy-apps
+    namespace: dummy-apps

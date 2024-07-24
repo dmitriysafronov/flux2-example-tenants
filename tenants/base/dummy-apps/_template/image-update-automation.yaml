@@ -1,0 +1,21 @@
+apiVersion: image.toolkit.fluxcd.io/v1beta1
+kind: ImageUpdateAutomation
+metadata:
+  name: dummy-apps
+  namespace: dummy-apps
+spec:
+  sourceRef:
+    kind: GitRepository
+    name: dummy-apps
+  git:
+    checkout:
+      ref:
+        branch: main
+    commit:
+      author:
+        name: Flux
+        email: root@cyberbrain.pw
+      messageTemplate: "Image update automation: dummy-apps [ci skip] "
+  interval: 10m0s
+  update:
+    path: ./
