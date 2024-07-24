@@ -6,14 +6,14 @@ patches:
   - patch: |
       - op: add
         path: /spec/path
-        value: ./overlays/lab/dummy-apps-merged
+        value: ./overlays/lab-testing/dummy-apps-merged
     target:
       kind: Kustomization
       name: "dummy-apps"
   - patch: |
       - op: add
         path: /spec/update/path
-        value: ./overlays/lab/dummy-apps-merged
+        value: ./overlays/lab-testing/dummy-apps-merged
     target:
       kind: ImageUpdateAutomation
       name: "dummy-apps"

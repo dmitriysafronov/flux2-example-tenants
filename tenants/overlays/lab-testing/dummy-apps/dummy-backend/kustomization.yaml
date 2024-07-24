@@ -1,19 +1,19 @@
 apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
 resources:
-  - ../../../../base/dummy-apps/dummy-apps-merged
+  - ../../../../base/dummy-apps/dummy-backend
 patches:
   - patch: |
       - op: add
         path: /spec/path
-        value: ./overlays/lab/dummy-apps-merged
+        value: ./overlays/lab-testing/dummy-backend
     target:
       kind: Kustomization
       name: "dummy-apps"
   - patch: |
       - op: add
         path: /spec/update/path
-        value: ./overlays/lab/dummy-apps-merged
+        value: ./overlays/lab-testing/dummy-backend
     target:
       kind: ImageUpdateAutomation
       name: "dummy-apps"
