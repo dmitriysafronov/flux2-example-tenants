@@ -2,12 +2,28 @@ apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
 namespace: dummy-apps-merged
 resources:
-- ../_template
+  - ../_template
 patches:
-- patch: |
-    - op: add
-      path: /spec/path
-      value: ./base/dummy-apps-merged/helm
-  target:
-    kind: Kustomization
-    name: "dummy-apps"
+  # Kustomization
+  - patch: |
+      - op: add
+        path: /spec/targetNamespace
+        value: dummy-apps-merged
+    target:
+      kind: Kustomization
+      name: "dummy-apps"
+  - patch: |
+      - op: add
+        path: /spec/path
+        value: ./base/dummy-apps-merged
+    target:
+      kind: Kustomization
+      name: "dummy-apps"
+  # ImageUpdateAutomation
+  - patch: |
+      - op: add
+        path: /spec/update/path
+        value: ./base/dummy-apps-merged
+    target:
+      kind: ImageUpdateAutomation
+      name: "dummy-apps"
